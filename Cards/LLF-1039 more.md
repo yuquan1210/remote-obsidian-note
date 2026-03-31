@@ -32,3 +32,14 @@ how do lead engine handle zendesk leads?
 - pending/unqualified/junk leads (isNotSolvedTicketStatus || isSolvedAsUnqualified = true) -> PublishAction.None
 	- those tickets still on zendesk, can be updated again become qualified?
 - qualified leads can be allocated
+
+2026-03-30
+phil:
+- we other types of leads coming in, may need more validations on enquiry-api, pause this implementaton, wait for that
+
+jim:
+- current validation in zendesk plugin do not include pending/unqualified/junk lead is becasue we didn't have zendesk leads into lead-engine
+- now we have zendesk leads into lead-engine and its not matching our lead-engine behavior, we simply extend the validation to include those zendesk leads
+- adding more validations to enquiry-api will be messy
+- consider consistency of validation logics between zendesk and enquiry-api (no need to be consistent, but need to be clear what validations happen in enquiry-api, what validation in zendesk)
+- reuse exisiting ones, rather than creating new ones
