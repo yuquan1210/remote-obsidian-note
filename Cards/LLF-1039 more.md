@@ -43,3 +43,18 @@ jim:
 - adding more validations to enquiry-api will be messy
 - consider consistency of validation logics between zendesk and enquiry-api (no need to be consistent, but need to be clear what validations happen in enquiry-api, what validation in zendesk)
 - reuse exisiting ones, rather than creating new ones
+
+original purpose of validation in zendesk & enquiry-api:
+- validate at zendesk filter input from source
+- validate at enquiry-api for what?
+
+
+Zendesk leads:
+refer to [link](https://git.realestate.com.au/financial-experiences/lead-lords/issues/317)
+- REA 2 field quick leads
+- Potential junk leads
+- Leads no franchises has accepted
+- When there's no franchises available in the postcode area
+- When there's an error getting franchise data
+
+How validations [here](https://git.realestate.com.au/financial-experiences/zendesk-adapter/issues/432) decided not clear
